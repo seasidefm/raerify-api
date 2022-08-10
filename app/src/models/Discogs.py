@@ -1,4 +1,3 @@
-from typing import Literal
 from pydantic import BaseModel
 
 
@@ -10,4 +9,4 @@ class DiscogsApiInfo(BaseModel):
 
 
 class DiscogsHealthResponse(BaseModel):
-    status: Literal["ok"]
+    status: str
