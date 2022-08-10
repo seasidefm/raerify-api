@@ -13,6 +13,10 @@ run:
 run-prod:
 	./venv/bin/uvicorn app.main:app --host=0.0.0.0 --port=10000
 
+migrate:
+	source .env \
+	&& ./venv/bin/alembic upgrade head
+
 fmt:
 	./venv/bin/black .
 
